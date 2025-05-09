@@ -70,6 +70,34 @@ const cuccok = [
       (allapot === '' || c.allapot === allapot)
     );
     megjelenites(szurt);
+
+    const kulcsszo = document.getElementById('kulcsszo').value.toLowerCase();
+  
+  // Kivesszük az összes kártyát
+  const kartyak = document.querySelectorAll('.card');
+
+  // Minden kártyát végigellenőrzünk
+  kartyak.forEach(function(card) {
+    // Az összes szöveget összefűzzük a kártyán
+    const cardText = card.textContent.toLowerCase();
+
+    // Ha a kulcsszó megtalálható a kártya szövegében, akkor megjelenítjük a kártyát
+    if (cardText.includes(kulcsszo)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+// Reset funkció
+function resetSzurok() {
+  // Reseteljük a keresőt és a kártyák megjelenítését
+  document.getElementById('kulcsszo').value = '';
+  const kartyak = document.querySelectorAll('.card');
+  kartyak.forEach(function(card) {
+    card.style.display = "block";
+  });
   }
   
   function resetSzurok() {
@@ -80,3 +108,62 @@ const cuccok = [
   
   window.onload = () => megjelenites(cuccok);
   
+  document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll(".gallery-item");
+  const searchInput = document.getElementById("searchInput");
+  const sortSelect = document.getElementById("sortSelect");
+  const categoryFilter = document.getElementById("categoryFilter");
+  const typeFilter = document.getElementById("typeFilter");
+
+  // Alap szűrés és rendezés frissítése
+  function updateGallery() {
+    const searchText = searchInput.value.toLowerCase();
+    const selectedCategory = categoryFilter.value;
+    const selectedType = typeFilter.value;
+    const sortBy = sortSelect.value;
+
+    const filteredItems = Array.from(items).filter((item) => {
+      const matchesSearch =
+        item.textContent.toLowerCase().includes(searchText);
+      const matchesCategory =
+        selectedCategory === "" ||
+        item.getAttribute("data-category") === selectedCategory;
+      const matchesType =
+        selectedType === "" || item.getAttribute("data-type") === selectedType;
+
+      return matchesSearch && matchesCategory && matchesType;
+    });
+
+    const sortedItems = filteredItems.sort((a, b) => {
+      if (sortBy === "name") {
+        return a.getAttribute("data-name").localeCompare(
+          b.getAttribute("data-name")
+        );
+      } else if (sortBy === "year") {
+        return (
+          parseInt(a.getAttribute("data-year")) -
+          parseInt(b.getAttribute("data-year"))
+        );
+      }
+      return 0;
+    });
+
+    items.forEach((item) => {
+      item.style.display = "none";
+    });
+
+    sortedItems.forEach((item) => {
+      item.style.display = "block";
+    });
+  }
+
+  // Eseményfigyelők
+  searchInput.addEventListener("input", updateGallery);
+  sortSelect.addEventListener("change", updateGallery);
+  categoryFilter.addEventListener("change", updateGallery);
+  typeFilter.addEventListener("change", updateGallery);
+
+  // Kezdéskor is frissítés
+  updateGallery();
+});
+
