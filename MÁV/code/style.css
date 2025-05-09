@@ -1,148 +1,148 @@
 /* Alap stílusok */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Fejléc */
-  header {
-    background-color: #003366;
-    color: white;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .header-logo img {
-    height: 50px;
-  }
-  
-  .header-title {
-    flex-grow: 1;
-    text-align: center;
-  }
-  
-  .header-title h1 {
-    margin: 0;
-    font-size: 1.8em;
-  }
-  
-  .header-placeholder {
-    width: 50px;
-  }
-  
-  /* Galéria szűrő */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fejléc */
+header {
+  background-color: white;
+  color: rgb(21, 67, 125);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo img {
+  height: 50px;
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.header-placeholder {
+  width: 50px;
+}
+
+/* Galéria szűrő */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.filter-container select,
+.filter-container button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filter-container button {
+  background-color: #003366;
+  color: white;
+  cursor: pointer;
+}
+
+.filter-container button:hover {
+  background-color: #0055a5;
+}
+
+/* Kártyák stílusa */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 0 20px 20px 20px;
+}
+
+.card {
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+.card-info {
+  padding: 15px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.card-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.card-info p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.card-info p strong {
+  color: #333;
+}
+
+/* Reszponzív design */
+@media (max-width: 768px) {
   .filter-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .filter-container select,
-  .filter-container button {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .filter-container button {
-    background-color: #003366;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .filter-container button:hover {
-    background-color: #0055a5;
-  }
-  
-  /* Kártyák stílusa */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    padding: 0 20px 20px 20px;
-  }
-  
+
   .card {
-    width: 350px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background-color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
+    max-width: 350px;
   }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-height: 200px;
-  }
-  
-  .card-info {
-    padding: 15px;
-    background-color: #f9f9f9;
+
+  header {
+    flex-direction: column;
     text-align: center;
   }
-  
-  .card-info h3 {
-    margin: 0 0 10px;
-    font-size: 1.2em;
-    color: #333;
+
+  .header-title {
+    margin-top: 10px;
   }
-  
-  .card-info p {
-    margin: 5px 0;
-    font-size: 1em;
-    color: #666;
+
+  .header-placeholder {
+    display: none;
   }
-  
-  .card-info p strong {
-    color: #333;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    max-width: 300px;
   }
-  
-  /* Reszponzív design */
-  @media (max-width: 768px) {
-    .filter-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .card {
-      width: 90%;
-      max-width: 350px;
-    }
-  
-    header {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .header-title {
-      margin-top: 10px;
-    }
-  
-    .header-placeholder {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .card {
-      width: 100%;
-      max-width: 300px;
-    }
-  }
-  
+}
+
