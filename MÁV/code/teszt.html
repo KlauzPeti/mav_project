@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MÁV Történeti Kincsek</title> 
-  <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+  <link rel="icon" href="logos/favicon.ico" type="image/x-icon"> 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="header-logo">
-      <img src="mavlogo.png" alt="MÁV Logo" title="MÁV">
+      <img src="logos/mavlogo.png" alt="MÁV Logo" title="MÁV">
     </div>
     <div class="header-title">
       <h1>MÁV Történeti Kincsek</h1>
@@ -34,6 +34,9 @@
       <option value="gyujtoi">Gyűjtői</option>
     </select>
 
+    <!-- 🔍 Szó alapú keresőmező -->
+    <input type="text" id="kulcsszo" placeholder="Keresés kulcsszóra...">
+
     <button onclick="szures()">Szűrés</button>
     <button onclick="resetSzurok()">Reset</button>
   </div>
@@ -41,7 +44,7 @@
   <div class="gallery" id="cuccLista">
     <!-- Kártyák -->
     <div class="card">
-      <img src="parolin_1.jpg" alt="Parolin 1">
+      <img src="parolin_pics/parolin_1.jpg" alt="Parolin 1">
       <div class="card-info">
         <h3>Parolin 1</h3>
         <p>Kategória: Parolin</p>
@@ -51,7 +54,7 @@
     </div>
 
     <div class="card">
-      <img src="munkas4-3 kezelo4,3.jpg" alt="Parolin 2">
+      <img src="parolin_pics/munkas4-3 kezelo4,3.jpg" alt="Parolin 2">
       <div class="card-info">
         <h3>Parolin 2</h3>
         <p>Kategória: Parolin</p>
@@ -61,7 +64,7 @@
     </div>
 
     <div class="card">
-      <img src="Karszalag.jpg" alt="Parolin 3">
+      <img src="parolin_pics/Karszalag.jpg" alt="Parolin 3">
       <div class="card-info">
         <h3>Parolin 3</h3>
         <p>Kategória: Parolin</p>
@@ -71,7 +74,7 @@
     </div>
 
     <div class="card">
-      <img src="Sapkajelveny.jpg" alt="Parolin 4">
+      <img src="parolin_pics/Sapkajelveny.jpg" alt="Parolin 4">
       <div class="card-info">
         <h3>Parolin 4</h3>
         <p>Kategória: Parolin</p>
