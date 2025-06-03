@@ -1,15 +1,20 @@
 /* Alap stílusok */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.65)),
+    url("parolin_pics/hatter.webp") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Fejléc */
 header {
   background-color: white;
-  color: rgb(21, 67, 125);
+  color: rgb(27, 68, 125);
   padding: 20px;
   display: flex;
   align-items: center;
