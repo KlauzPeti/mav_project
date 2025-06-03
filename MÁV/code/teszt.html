@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MÁV Történeti Kincsek</title> 
-  <link rel="icon" href="logos/favicon.ico" type="image/x-icon"> 
+  <title>MÁV Történeti Kincsek</title>
+  <link rel="icon" href="logos/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,6 +19,14 @@
   </header>
 
   <div class="filter-container">
+    <!-- 1) Rendezés legördülő -->
+    <select id="rendezes" onchange="szures()">
+      <option value="">Rendezés</option>
+      <option value="asc">A → Z</option>
+      <option value="desc">Z → A</option>
+    </select>
+
+    <!-- 2) Kategória -->
     <select id="kategoria">
       <option value="">Kategória</option>
       <option value="parolin">Parolin</option>
@@ -27,6 +35,7 @@
       <option value="mav">MÁV</option>
     </select>
 
+    <!-- 3) Állapot -->
     <select id="allapot">
       <option value="">Állapot</option>
       <option value="uj">Új</option>
@@ -34,53 +43,15 @@
       <option value="gyujtoi">Gyűjtői</option>
     </select>
 
-    <!-- 🔍 Szó alapú keresőmező -->
-    <input type="text" id="kulcsszo" placeholder="Keresés kulcsszóra...">
+    <!-- 4) Szó alapú keresőmező -->
+    <input type="text" id="kulcsszo" placeholder="Keresés kulcsszóra..." oninput="szures()">
 
+    <!-- 5) Szűrés és Reset -->
     <button onclick="resetSzurok()">Reset</button>
   </div>
 
   <div class="gallery" id="cuccLista">
-    <!-- Kártyák -->
-    <div class="card">
-      <img src="parolin_pics/parolin_1.jpg" alt="Parolin 1">
-      <div class="card-info">
-        <h3>Parolin 1</h3>
-        <p>Kategória: Parolin</p>
-        <p>Évjárat: 1995</p>
-        <p>Állapot: Új</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="parolin_pics/munkas4-3 kezelo4,3.jpg" alt="Parolin 2">
-      <div class="card-info">
-        <h3>Parolin 2</h3>
-        <p>Kategória: Parolin</p>
-        <p>Évjárat: 2000</p>
-        <p>Állapot: Használt</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="parolin_pics/Karszalag.jpg" alt="Parolin 3">
-      <div class="card-info">
-        <h3>Parolin 3</h3>
-        <p>Kategória: Parolin</p>
-        <p>Évjárat: 1990</p>
-        <p>Állapot: Gyűjtői</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="parolin_pics/Sapkajelveny.jpg" alt="Parolin 4">
-      <div class="card-info">
-        <h3>Parolin 4</h3>
-        <p>Kategória: Parolin</p>
-        <p>Évjárat: 1985</p>
-        <p>Állapot: Használt</p>
-      </div>
-    </div>
+    <!-- A JavaScript tölti fel a kártyákat -->
   </div>
 
   <script src="script.js"></script>
