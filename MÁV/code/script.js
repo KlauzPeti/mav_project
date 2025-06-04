@@ -3,9 +3,6 @@ const cuccok = [
   { nev: "Ellenőr II. - Ellenőr I.",       kategoria: "parolin", ev: 1975, allapot: "hasznalt", kep: "parolin_pics/ellenor1_2.jpg" },
   { nev: "Felügyelő",                      kategoria: "parolin", ev: 1985, allapot: "hasznalt", kep: "parolin_pics/felugyelo.jpg" },
   { nev: "Felvigyázó I.",                  kategoria: "parolin", ev: 1985, allapot: "hasznalt", kep: "parolin_pics/felvigyazo1.jpg" },
-  { nev: "MÁV telefon 1982",               kategoria: "telefon", ev: 1982, allapot: "gyujtoi",   kep: "parolin_pics/felvigyazo3.jpg" },
-  { nev: "Kalauz ruha",                    kategoria: "ruha",    ev: 1990, allapot: "hasznalt", kep: "parolin_pics/foellenor1.jpg" },
-  { nev: "Jegykiadó gép",                  kategoria: "mav",     ev: 1985, allapot: "gyujtoi",   kep: "parolin_pics/foellenor2.jpg" },
   { nev: "Főfelügyelő",                    kategoria: "parolin", ev: 1985, allapot: "hasznalt", kep: "parolin_pics/fofelugyelo.jpg" },
   { nev: "Főintéző II. - Főintéző I.",      kategoria: "parolin", ev: 1985, allapot: "hasznalt", kep: "parolin_pics/fointezo2_fointezo1.jpg" },
   { nev: "Főtanácsos II. - Főtanácsos I.",  kategoria: "parolin", ev: 1985, allapot: "hasznalt", kep: "parolin_pics/fotanacsos1_2.jpg" },
@@ -40,9 +37,6 @@ const cuccok = [
   { nev: "Tanácsos II. - Tanácsos I.", kategoria: "parolin", ev: 1985, allapot: "hasznalt", kep: "parolin_pics/tanacsos2_tanacsos1.jpg" },
   { nev: "Tiszt",                         kategoria: "parolin", ev: 1985, allapot: "hasznalt", kep: "parolin_pics/tiszt.jpg" },
   { nev: "Tisztképző Tanf. Hallg.",       kategoria: "parolin", ev: 1985, allapot: "hasznalt", kep: "parolin_pics/tisztkepzo.jpg" },
-  { nev: "MÁV telefon 1982 (ismét)",      kategoria: "telefon", ev: 1982, allapot: "gyujtoi",   kep: "parolin_pics/munkas4-3 kezelo4,3.jpg" },
-  { nev: "Kalauz ruha (ismét)",           kategoria: "ruha",    ev: 1990, allapot: "hasznalt", kep: "parolin_pics/Karszalag.jpg" },
-  { nev: "Jegykiadó gép (ismét)",         kategoria: "mav",     ev: 1985, allapot: "gyujtoi",   kep: "parolin_pics/Sapkajelveny.jpg" },
 ];
 
 // Megjelenít egy listát a galériában
