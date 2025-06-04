@@ -67,14 +67,12 @@ function megjelenites(lista) {
 // A szűrt + rendezett lista előállítása
 function szures() {
   const kategoria = document.getElementById('kategoria').value;
-  const allapot   = document.getElementById('allapot').value;
   const kulcsszo  = document.getElementById('kulcsszo').value.toLowerCase();
   const rendezes  = document.getElementById('rendezes').value;
 
   // 1) Először szűrünk (kategória, állapot, kulcsszó)
   let szurt = cuccok.filter(c =>
     (kategoria === '' || c.kategoria === kategoria) &&
-    (allapot   === '' || c.allapot === allapot) &&
     (kulcsszo  === '' || c.nev.toLowerCase().includes(kulcsszo))
   );
 
@@ -92,7 +90,6 @@ function szures() {
 // Reset: visszaállít minden szűrőt és a rendezést
 function resetSzurok() {
   document.getElementById('kategoria').value = '';
-  document.getElementById('allapot').value   = '';
   document.getElementById('kulcsszo').value   = '';
   document.getElementById('rendezes').value  = '';
   megjelenites(cuccok);
@@ -103,7 +100,6 @@ window.onload = () => {
   megjelenites(cuccok);
 
   document.getElementById('kategoria').addEventListener('change', szures);
-  document.getElementById('allapot').addEventListener('change', szures);
   document.getElementById('kulcsszo').addEventListener('input', szures);
   document.getElementById('rendezes').addEventListener('change', szures);
 };
