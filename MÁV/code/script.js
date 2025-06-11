@@ -41,16 +41,18 @@ const cuccok = [
 
 // Megjelenít egy listát a galériában
 function megjelenites(lista) {
-  const div = document.getElementById('cuccLista');
-  div.innerHTML = '';
-  lista.forEach(cucc => {
-    div.innerHTML += `
+  const container = document.getElementById('cuccLista');
+  container.innerHTML = '';
+  lista.forEach(item => {
+    container.innerHTML += `
       <div class="card">
-        <img src="${cucc.kep}" alt="${cucc.nev}">
+        <div class="img-wrapper">
+          <img src="${item.kep}" alt="${item.nev}">
+        </div>
         <div class="card-info">
-          <h3>${cucc.nev}</h3>
-          <p><strong>Kategória:</strong> ${cucc.kategoria}</p>
-          <p><strong>Év:</strong> ${cucc.ev}</p>
+          <h3>${item.nev}</h3>
+          <p><strong>Kategória:</strong> ${item.kategoria}</p>
+          <p><strong>Év:</strong> ${item.ev}</p>
         </div>
       </div>
     `;

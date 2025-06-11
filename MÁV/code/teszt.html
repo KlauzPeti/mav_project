@@ -2,49 +2,56 @@
 <html lang="hu">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MÁV Történeti Kincsek</title>
   <link rel="icon" href="logos/favicon.ico" type="image/x-icon">
+
+  <!-- Saját stílusok -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="header-logo">
-      <img src="logos/mavlogo.png" alt="MÁV Logo" title="MÁV">
+
+  <div class="site-container">
+
+    <!-- Fejléc -->
+    <header class="header">
+      <div class="header-logo">
+        <img src="logos/mavlogo.png" alt="MÁV Logo">
+      </div>
+      <div class="header-title">
+        <h1>MÁV Történeti Kincsek</h1>
+      </div>
+    </header>
+
+    <!-- Szűrők -->
+    <div class="filter-container">
+      <select id="kategoria" onchange="szures()">
+        <option value="">Összes kategória</option>
+        <!-- … -->
+      </select>
+      <select id="rendezes" onchange="szures()">
+        <option value="">Rendezés nincs</option>
+        <option value="asc">Év szerint ↑</option>
+        <option value="desc">Év szerint ↓</option>
+      </select>
+      <input type="text" id="kulcsszo" placeholder="Keresés…" oninput="szures()">
+      <button onclick="resetSzurok()">Törlés</button>
     </div>
-    <div class="header-title">
-      <h1>MÁV Történeti Kincsek</h1>
+
+    <!-- Galéria -->
+    <div class="gallery" id="cuccLista">
+      
+           <div class="card">
+             <div class="img-wrapper">
+               <img src="…" alt="…">
+             </div>
+             <div class="card-info">…</div>
+           </div>
+      
     </div>
-    <div class="header-placeholder"></div>
-  </header>
+  </div><!-- /.site-container -->
 
-  <div class="filter-container">
-    <!-- 1) Rendezés legördülő -->
-    <select id="rendezes" onchange="szures()">
-      <option value="">Rendezés</option>
-      <option value="asc">A → Z</option>
-      <option value="desc">Z → A</option>
-    </select>
-
-    <!-- 2) Kategória -->
-    <select id="kategoria">
-      <option value="">Kategória</option>
-      <option value="parolin">Parolin</option>
-    </select>
-
-    
-
-    <!-- 4) Szó alapú keresőmező -->
-    <input type="text" id="kulcsszo" placeholder="Keresés kulcsszóra..." oninput="szures()">
-
-    <!-- 5) Szűrés és Reset -->
-    <button onclick="resetSzurok()">Törlés</button>
-  </div>
-
-  <div class="gallery" id="cuccLista">
-    <!-- A JavaScript tölti fel a kártyákat -->
-  </div>
-
+  <!-- Saját script -->
   <script src="script.js"></script>
 </body>
 </html>

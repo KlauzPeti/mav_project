@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /* Alap stílusok */
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -23,7 +27,7 @@ header {
 }
 
 .header-logo img {
-  height: 50px;
+  max-height: 60px;
 }
 
 .header-title {
@@ -75,54 +79,57 @@ header {
 
 /* Kártyák stílusa */
 .gallery {
-  display: grid;
-  gap: 20px;
-  justify-content: center;
-  padding: 0 20px 20px 20px;
-  grid-template-columns: repeat(3, 370px); /* Mindig 3 oszlop, 370px-es card-szélességgel */
+  display: grid;                             /* Gridre váltunk */
+  grid-template-columns: repeat(auto-fill, 370px);
+                                              /* annyi 370px széles oszlop, amennyi épp befér */
+  gap: 1rem;                                 /* távolság sorok és oszlopok között */
+  justify-content: center;                   /* az egész grid blokk középre igazítása */
+  padding: 0 20px 20px;  
 }
 
 .card {
-  width: 370px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  width: 370px;                   /* fix szélesség */
   background-color: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: flex;
-  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-.card img {
+/* ——— Képwrapper + objektum kitöltés ——— */
+.img-wrapper {
   width: 100%;
-  height: auto;       /* Ne vágjon le semmit */
-  display: block;
-  background-color: #f9f9f9;
+  height: 130px;      /* igény szerint módosíthatod a magasságot */
+  overflow: hidden;
 }
 
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* teljes kitöltés, a felesleg levágódik */
+  display: block;
+}
+
+/* ——— Kártya alján az infósáv ——— */
 .card-info {
-  padding: 15px;
-  background-color: #f9f9f9;
-  text-align: center;
+  padding: 1rem;
 }
 
 .card-info h3 {
-  margin: 0 0 10px;
-  font-size: 1.2em;
-  color: #333;
-  font-weight: 500;
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
 }
 
 .card-info p {
-  margin: 5px 0;
-  font-size: 1em;
+  margin: 0.25rem 0;
   color: #666;
+  font-size: 1rem;
 }
 
 .card-info p strong {
