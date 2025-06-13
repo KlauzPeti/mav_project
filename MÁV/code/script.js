@@ -65,17 +65,22 @@ function szures() {
   const kulcsszo  = document.getElementById('kulcsszo').value.toLowerCase();
   const rendezes  = document.getElementById('rendezes').value;
 
-  // 1) Először szűrünk (kategória, állapot, kulcsszó)
+  // 1) szűrés
   let szurt = cuccok.filter(c =>
     (kategoria === '' || c.kategoria === kategoria) &&
     (kulcsszo  === '' || c.nev.toLowerCase().includes(kulcsszo))
   );
 
-  // 2) Ezután rendezünk a "rendezes" select értéke szerint
-  if (rendezes === 'asc') {
-    szurt.sort((a, b) => a.nev.localeCompare(b.nev, 'hu'));
-  } else if (rendezes === 'desc') {
-    szurt.sort((a, b) => b.nev.localeCompare(a.nev, 'hu'));
+  // 2) rendezés objektum-mappinggel, plusz "asc"/"desc" év szerinti kulcsokkal
+  const rendezok = {
+    'nev-asc':  (a, b) => a.nev.localeCompare(b.nev, 'hu'),
+    'nev-desc': (a, b) => b.nev.localeCompare(a.nev, 'hu'),
+    'asc':      (a, b) => a.ev - b.ev,   // ha a <select> még mindig asc=Év ↑
+    'desc':     (a, b) => b.ev - a.ev    // ha a <select> még mindig desc=Év ↓
+  };
+
+  if (rendezok[rendezes]) {
+    szurt.sort(rendezok[rendezes]);
   }
 
   // 3) Megjelenítjük a kapott listát
