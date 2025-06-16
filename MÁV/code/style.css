@@ -81,7 +81,6 @@ header {
 .gallery {
   display: grid;                             /* Gridre váltunk */
   grid-template-columns: repeat(auto-fill, 370px);
-                                              /* annyi 370px széles oszlop, amennyi épp befér */
   gap: 1rem;                                 /* távolság sorok és oszlopok között */
   justify-content: center;                   /* az egész grid blokk középre igazítása */
   padding: 0 20px 20px;  
