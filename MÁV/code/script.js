@@ -37,6 +37,9 @@ const cuccok = [
   { nev: "Tanácsos II. - Tanácsos I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/tanacsos2_tanacsos1.jpg" },
   { nev: "Tiszt", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/tiszt.jpg" },
   { nev: "Tisztképző Tanf. Hallg.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/tisztkepzo.jpg" },
+  { nev: "Igazgatóhelyettes", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/igazgatohelyettes.png" },
+  { nev: "Igazgató", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/igazgato.png" },
+  { nev: "Főigazgató", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/foigazgato.png" },
 ];
 
 // Megjelenít egy listát a galériában
