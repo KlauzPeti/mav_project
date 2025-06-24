@@ -46,6 +46,11 @@ const cuccok = [
   { nev: "Állomásfelvigyázó gyakornok", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/allomasfelvigyazo_gyakornok.png" },
   { nev: "Ellenőr (műszaki)", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/ellenor.png" },
   { nev: "Főállomáselöljáró", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/foallomaseloljaro.png" },
+  { nev: "Felügyelő (műszaki)", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/felugyelo.png" },
+  { nev: "Főellenőr (műszaki)", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/foellenor.png" },
+  { nev: "Főfelügyelő (műszaki)", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/fofelugyelo.png" },
+  { nev: "Fogalmazó gyakornok<br>Mérnök gyakornok", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/fogalmazo_gyakornok.png" },
+  { nev: "Fogalmazó<br>Mérnök", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/fogalmazo.png" },
 ];
 
 // Megjelenít egy listát a galériában
