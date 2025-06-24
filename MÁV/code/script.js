@@ -40,6 +40,7 @@ const cuccok = [
   { nev: "Igazgatóhelyettes", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/igazgatohelyettes.png" },
   { nev: "Igazgató", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/igazgato.png" },
   { nev: "Főigazgató", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/foigazgato.png" },
+  { nev: "Vezérigazgató", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/vezerigazgato.png" },
 ];
 
 // Megjelenít egy listát a galériában
