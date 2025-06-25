@@ -12,7 +12,7 @@ const cuccok = [
   { nev: "Karszalag", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/Karszalag.jpg" },
   { nev: "Mérnök Főintéző I. / Titkár I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/mernok_fointezo1_titkar1.jpg" },
   { nev: "Mérnök Főintéző II. / Titkár II.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/mernok_fointezo2_titkar2.jpg" },
-  { nev: "Mérnök Főtiszt / Fogalmazó", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/mernok_fotiszt_fogalmazo.jpg" },
+  { nev: "Mérnök Főtiszt / Fogalmazó", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/mernok_fotiszt_fogalmazo.png" },
   { nev: "Mérnök Intéző / Segédtitkár", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/mernok_intezo_segedtitkar.jpg" },
   { nev: "Munkás I. / Kezelő I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/munkas1 kezelo1.jpg" },
   { nev: "Munkás II. / Kezelő II.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/munkas2_kezelo2.jpg" },
