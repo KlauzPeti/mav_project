@@ -5,6 +5,7 @@ const cuccok = [
   { nev: "Főellenőr II.", kategoria: "parolin", ev: 1975,   kep: "parolin_pics/uj piros/foellenor2.png", szakcsoport: "III." },
   { nev: "Felügyelő", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj piros/felugyelo_regi.png", szakcsoport: "II." },
   { nev: "Felvigyázó I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj piros/felvi1.png", szakcsoport: "IV." },
+  { nev: "Felvigyázó I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj zold/zfelvi1.png", szakcsoport: "IV." },
   { nev: "Főfelügyelő", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj piros/fofelugyelo_regi.png", szakcsoport: "II." },
   { nev: "Főintéző II. - Főintéző I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj piros/fointezo2_fointezo1.png", szakcsoport: "II." },
   { nev: "Főtanácsos II. - Főtanácsos I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj piros/fotanacsos1_2.png", szakcsoport: "I." },
