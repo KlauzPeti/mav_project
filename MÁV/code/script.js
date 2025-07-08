@@ -165,12 +165,14 @@ function szures() {
   const kulcsszo  = document.getElementById('kulcsszo').value.toLowerCase();
   const rendezes  = document.getElementById('rendezes').value;
   const szakcsoport = document.getElementById('szakcsoport').value;
+  const szin = document.getElementById('szin')?.value.toLowerCase();
 
   // 1) szűrés
   let szurt = cuccok.filter(c =>
     (kategoria === '' || c.kategoria === kategoria) &&
     (kulcsszo  === '' || c.nev.toLowerCase().includes(kulcsszo)) &&
-    (szakcsoport === '' || c.szakcsoport === szakcsoport)
+    (szakcsoport === '' || c.szakcsoport === szakcsoport)&&
+    (szin === '' || c.kep.toLowerCase().includes(szin))
   );
 
   // 2) rendezés objektum-mappinggel, plusz "asc"/"desc" év szerinti kulcsokkal
@@ -195,6 +197,7 @@ function resetSzurok() {
   document.getElementById('kulcsszo').value   = '';
   document.getElementById('rendezes').value  = '';
   document.getElementById('szakcsoport').value = '';
+  document.getElementById('szin').value = '';
   megjelenites(cuccok);
 }
 
@@ -205,4 +208,6 @@ window.onload = () => {
   document.getElementById('kategoria').addEventListener('change', szures);
   document.getElementById('kulcsszo').addEventListener('input', szures);
   document.getElementById('rendezes').addEventListener('change', szures);
+  document.getElementById('szakcsoport').addEventListener('change', szures);
+  document.getElementById('szin')?.addEventListener('change', szures);
 };
