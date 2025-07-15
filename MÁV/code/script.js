@@ -249,5 +249,6 @@ function getBadge(imagePath) {
   if (imagePath.includes("kek"))    return '<span class="badge badge-blue">Vontatás és műhely</span>';
   if (imagePath.includes("zold"))   return '<span class="badge badge-green">Pályafenttartás</span>';
   if (imagePath.includes("barna"))  return '<span class="badge badge-brown">Távközlő és biztosítóberendezési</span>';
+  if (imagePath.includes("egyeb"))   return '<span class="badge badge-egyeb">Egyéb</span>';
   return '';
 }
