@@ -88,7 +88,7 @@ header {
 
 .card {
   width: 370px;                   /* fix szélesség */
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.65);
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -97,8 +97,8 @@ header {
 }
 
 .card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,1);
 }
 
 /* ——— Képwrapper + objektum kitöltés ——— */
