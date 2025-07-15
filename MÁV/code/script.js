@@ -179,6 +179,9 @@ function megjelenites(lista) {
           <img src="${item.kep}" alt="${item.nev}">
         </div>
         <div class="card-info">
+          <div class="badge-container">
+            ${getBadge(item.kep)}
+          </div>
           <h3>${item.nev}</h3>
           <p><strong>Kategória:</strong> ${item.kategoria}</p>
           <p><strong>Év:</strong> ${item.ev}</p>
@@ -240,3 +243,11 @@ window.onload = () => {
   document.getElementById('szakcsoport').addEventListener('change', szures);
   document.getElementById('szin')?.addEventListener('change', szures);
 };
+
+function getBadge(imagePath) {
+  if (imagePath.includes("piros"))  return '<span class="badge badge-red">Forgalmi, kereskedelmi</span>';
+  if (imagePath.includes("kek"))    return '<span class="badge badge-blue">Vontatás és műhely</span>';
+  if (imagePath.includes("zold"))   return '<span class="badge badge-green">Pályafenttartás</span>';
+  if (imagePath.includes("barna"))  return '<span class="badge badge-brown">Távközlő és biztosítóberendezési</span>';
+  return '';
+}

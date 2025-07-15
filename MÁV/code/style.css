@@ -134,3 +134,18 @@ header {
 .card-info p strong {
   color: #333;
 }
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.badge-red   { background-color: #dc2626; }
+.badge-blue  { background-color: #2563eb; }
+.badge-green { background-color: #16a34a; }
+.badge-brown { background-color: #92400e; }
