@@ -150,3 +150,40 @@ header {
 .badge-green { background-color: #16a34a; }
 .badge-brown { background-color: #92400e; }
 .badge-egyeb {background-color: #222;}
+
+.moving-tracks-header {
+  position: relative;
+  height: 300px;
+  background-image: url("background/vecteezy_horizontal-straight-traintrack-railroad-railway-contour_17125328_313/vecteezy_horizontal-straight-traintrack-railroad-railway-contour_17125328.jpg"); /* ismétlődő sín kép */
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: 0 center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo {
+  max-height: 80px;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-family: 'Courier New', monospace;
+  font-size: 2.4rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  text-align: center;
+}

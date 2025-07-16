@@ -14,15 +14,12 @@
   <div class="site-container">
 
     <!-- Fejléc -->
-    <header class="header">
-      <div class="header-logo">
-        <img src="logos/mavlogo.png" alt="MÁV Logo">
-      </div>
-      <div class="header-title">
-        <h1>MÁV Történeti Kincsek</h1>
-      </div>
-      <div class="header-placeholder"></div>
-    </header>
+    <header class="moving-tracks-header">
+  <div class="hero-overlay">
+    <img class="hero-logo" src="logos/mavlogo.png" alt="MÁV logo">
+    <h1 class="hero-title">MÁV Történeti Kincsek</h1>
+  </div>
+</header>
 
     <!-- Szűrők -->
     <div class="filter-container">
@@ -73,5 +70,22 @@
 
   <!-- Saját script -->
   <script src="script.js"></script>
+  <script>
+  const header = document.querySelector('.moving-tracks-header');
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const delta = scrollTop - lastScrollTop;
+
+    // Mozgatjuk a háttér pozícióját vízszintesen
+    let currentX = parseInt(header.dataset.bgx || 0, 10);
+    currentX += delta * 0.5; // módosítható sebesség
+    header.style.backgroundPosition = `${currentX}px center`;
+    header.dataset.bgx = currentX;
+
+    lastScrollTop = scrollTop;
+  });
+</script>
 </body>
 </html>
