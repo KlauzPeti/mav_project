@@ -151,39 +151,37 @@ header {
 .badge-brown { background-color: #92400e; }
 .badge-egyeb {background-color: #222;}
 
-.moving-tracks-header {
-  position: relative;
-  height: 300px;
-  background-image: url("background/vecteezy_horizontal-straight-traintrack-railroad-railway-contour_17125328_313/vecteezy_horizontal-straight-traintrack-railroad-railway-contour_17125328.jpg"); /* ismétlődő sín kép */
+/* === Fejléc + sín fix javítása === */
+
+.static-header {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 30px;
+}
+
+.header-logo img {
+  height: 60px;
+}
+
+.header-title h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1b447d;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* A sín sáv — közvetlenül a cím alatt */
+.rail-track {
+  height: 40px;
+  background-image: url("background/sinek.png"); /* pontos fájlnév! */
   background-repeat: repeat-x;
   background-size: auto 100%;
-  background-position: 0 center;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-logo {
-  max-height: 80px;
-  margin-bottom: 10px;
-}
-
-.hero-title {
-  font-family: 'Courier New', monospace;
-  font-size: 2.4rem;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  text-transform: uppercase;
-  text-align: center;
+  background-position: center;
 }
