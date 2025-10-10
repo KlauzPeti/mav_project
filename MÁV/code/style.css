@@ -151,9 +151,9 @@ header {
 .badge-green { background-color: #16a34a; }
 .badge-brown { background-color: #92400e; }
 .badge-black { background-color: #231f20; }
+.badge-vallap {background-color: #666;}
 .badge-lila   {background-color: #a54686;}
-.badge-vallap {background-color: burlywood;}
-.badge-egyeb  {background-color: #222;}
+.badge-egyeb {background-color: #222;}
 
 /* === Fejléc + sín fix javítása === */
 
@@ -165,6 +165,7 @@ header {
 .header-inner {
   display: flex;
   align-items: center;
+  justify-content: center; /* középre teszi a címet */
   gap: 20px;
   padding: 15px 30px;
 }
@@ -174,11 +175,12 @@ header {
 }
 
 .header-title h1 {
-  font-size: 2rem;
+   font-size: 2rem;
   font-weight: 600;
   color: #1b447d;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center; /* tényleges középre igazítás minden kijelzőn */
 }
 
 /* A sín sáv — közvetlenül a cím alatt */
