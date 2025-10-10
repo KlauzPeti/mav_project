@@ -151,6 +151,7 @@ header {
 .badge-green { background-color: #16a34a; }
 .badge-brown { background-color: #92400e; }
 .badge-black { background-color: #231f20; }
+.badge-vallap {background-color: #666;}
 .badge-egyeb {background-color: #222;}
 
 /* === Fejléc + sín fix javítása === */
