@@ -303,12 +303,13 @@ window.onload = () => {
 };
 
 function getBadge(imagePath) {
-  if (imagePath.includes("piros"))  return '<span class="badge badge-red">Forgalmi, kereskedelmi</span>';
+  if (imagePath.includes("parolin_pics/uj piros"))  return '<span class="badge badge-red">Forgalmi, kereskedelmi</span>';
   if (imagePath.includes("kek"))    return '<span class="badge badge-blue">Vontatás és műhely</span>';
   if (imagePath.includes("zold"))   return '<span class="badge badge-green">Pályafenttartás</span>';
   if (imagePath.includes("barna"))  return '<span class="badge badge-brown">Távközlő és biztosítóberendezési</span>';
   if (imagePath.includes("fekete"))  return '<span class="badge badge-black">Egészségügyi</span>';
   if (imagePath.includes("lila"))  return '<span class="badge badge-lila">Egyéb szakszolgálat</span>';
+  if (imagePath.includes("parolin_pics/regi"))   return '<span class="badge badge-vallap">Vállap</span>';
   if (imagePath.includes("egyeb"))   return '<span class="badge badge-egyeb">Egyéb</span>';
   return '';
 }
