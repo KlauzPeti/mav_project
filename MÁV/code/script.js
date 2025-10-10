@@ -195,6 +195,35 @@ const cuccok = [
   { nev: "Szaktechnikus / Intéző", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj fekete/szaktechnikus_intezo_fekete.png", szakcsoport: "I./a" },
   { nev: "Tiszt", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj fekete/tiszt_regi_fekete.png", szakcsoport: "II." },
   { nev: "Tisztképző Tanfolyam Hallgató", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj fekete/tisztkepzo_fekete.png" },
+  { nev: "Ellenőr II. - Ellenőr I.", kategoria: "parolin", ev: 1975,   kep: "parolin_pics/uj lila/ellenor2_ellenor1_lila.png", szakcsoport: "III." },
+  { nev: "Felvigyázó I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/felvi1_lila.png", szakcsoport: "IV." },
+  { nev: "Felvigyázó III.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/felvi3_lila.png", szakcsoport: "IV." },
+  { nev: "Felvigyázó IV. / Felvigyázó III.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/felvi4_felvi3_lila.png", szakcsoport: "IV." },
+  { nev: "Főellenőr I.", kategoria: "parolin", ev: 1975,   kep: "parolin_pics/uj lila/foellenor1_lila.png", szakcsoport: "III." },
+  { nev: "Főellenőr II.", kategoria: "parolin", ev: 1975,   kep: "parolin_pics/uj lila/foellenor2_lila.png", szakcsoport: "III." },
+  { nev: "Főtiszt", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/fotiszt_regi_lila.png", szakcsoport: "III." },
+  { nev: "Intéző II. - Intéző I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/intezo2_intezo1_lila.png", szakcsoport: "II." },
+  { nev: "Mérnök Főintéző II. / Titkár II.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/mernok_fointezo2_titkar2_lila.png", szakcsoport: "I." },
+  { nev: "Mérnök Főtiszt / Fogalmazó", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/mernok_fotiszt_fogalmazo_lila.png", szakcsoport: "I." },
+  { nev: "Mérnök Intéző / Segédtitkár", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/mernok_intezo_segedtitkar_lila.png", szakcsoport: "I." },
+  { nev: "Munkás I. / Kezelő I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/munkas1_kezelo1_lila.png", szakcsoport: "V." },
+  { nev: "Munkás II. / Kezelő II.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/munkas2_kezelo2_lila.png", szakcsoport: "V." },
+  { nev: "Munkás IV. - Munkás III. / Kezelő IV. - Kezelő III.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/munkas4_3_kezelo4_3_lila.png", szakcsoport: "V." },
+  { nev: "Segédellenőr II. / Segédellenőr I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/segedellenor2_segedellenor1_lila.png", szakcsoport: "III." },
+  { nev: "Segédfelvigyázó II. / Segédfelvigyázó I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/segedfel2_1_lila.png", szakcsoport: "IV." },
+  { nev: "Segédfelvigyázó III.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/segedfel3_lila.png", szakcsoport: "IV." },
+  { nev: "Segédfelvigyázó IV.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/segedfelvigyazo4_lila.png", szakcsoport: "IV." },
+  { nev: "Segédmunkás IV. / Segédkezelő IV.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/segedmunkas4_segedkezelo4_lila.png", szakcsoport: "V." },
+  { nev: "Segédtiszt I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/segedtiszt1_lila.png", szakcsoport: "III." },
+  { nev: "Segédtiszt II.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/segedtiszt2_lila.png", szakcsport: "III."},
+  { nev: "Segédtisztképző Tanfolyam Hallgató", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/segedtisztkepzo_lila.png" },
+  { nev: "Segédmunkás II. / Segédmunkás I.  Segédkezelő II. / Segédkezelő I.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/sm1_2_sk1_2_lila.png", szakcsoport: "V." },
+  { nev: "Segédmunkás III. / Segédkezelő III.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/sm3_sk3_lila.png", szakcsoport: "V." },
+  { nev: "Szaktechnikus / Főintéző II.", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/szaktechnikus_fointezo2_lila.png", szakcsoport: "I./a" },
+  { nev: "Szaktechnikus / Főtiszt", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/szaktechnikus_fotiszt_lila.png", szakcsoport: "I./a" },
+  { nev: "Szaktechnikus / Intéző", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/szaktechnikus_intezo_lila.png", szakcsoport: "I./a" },
+  { nev: "Tiszt", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/tiszt_regi_lila.png", szakcsoport: "II." },
+  { nev: "Tisztképző Tanfolyam Hallgató", kategoria: "parolin", ev: 1985,   kep: "parolin_pics/uj lila/tisztkepzo_lila.png" },
 ];
 
 // Megjelenít egy listát a galériában
@@ -279,6 +308,7 @@ function getBadge(imagePath) {
   if (imagePath.includes("zold"))   return '<span class="badge badge-green">Pályafenttartás</span>';
   if (imagePath.includes("barna"))  return '<span class="badge badge-brown">Távközlő és biztosítóberendezési</span>';
   if (imagePath.includes("fekete"))  return '<span class="badge badge-black">Egészségügyi</span>';
+  if (imagePath.includes("lila"))  return '<span class="badge badge-lila">Egyéb szakszolgálat</span>';
   if (imagePath.includes("egyeb"))   return '<span class="badge badge-egyeb">Egyéb</span>';
   return '';
 }
