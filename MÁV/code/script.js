@@ -514,12 +514,19 @@ window.onload = () => {
 
 function getBadge(imagePath) {
   if (imagePath.includes("parolin_pics/uj piros"))  return '<span class="badge badge-red">Forgalmi, kereskedelmi</span>';
-  if (imagePath.includes("kek"))    return '<span class="badge badge-blue">Vontatás és műhely</span>';
-  if (imagePath.includes("zold"))   return '<span class="badge badge-green">Pályafenttartás</span>';
-  if (imagePath.includes("barna"))  return '<span class="badge badge-brown">Távközlő és biztosítóberendezési</span>';
-  if (imagePath.includes("fekete"))  return '<span class="badge badge-black">Egészségügyi</span>';
-  if (imagePath.includes("lila"))  return '<span class="badge badge-lila">Egyéb szakszolgálat</span>';
-  if (imagePath.includes("parolin_pics/regi"))   return '<span class="badge badge-vallap">Vállap</span>';
+  if (imagePath.includes("parolin_pics/uj kek"))    return '<span class="badge badge-blue">Vontatás és műhely</span>';
+  if (imagePath.includes("parolin_pics/uj zold"))   return '<span class="badge badge-green">Pályafenttartás</span>';
+  if (imagePath.includes("parolin_pics/uj barna"))  return '<span class="badge badge-brown">Távközlő és biztosítóberendezési</span>';
+  if (imagePath.includes("parolin_pics/uj fekete"))  return '<span class="badge badge-black">Egészségügyi</span>';
+  if (imagePath.includes("parolin_pics/uj lila"))  return '<span class="badge badge-lila">Egyéb </span>';
+  if (imagePath.includes("igazgato"))   return '<span class="badge badge-vallap">Vezetőség</span>';
   if (imagePath.includes("egyeb"))   return '<span class="badge badge-egyeb">Egyéb</span>';
+  if (imagePath.includes("parolin_pics/regi piros"))   return '<span class="badge badge-red">Forgalmi- és Kereskedelmi</span>';
+  if (imagePath.includes("parolin_pics/vallapok_zold"))   return '<span class="badge badge-green">Pályaépítési- Pályafenntartási</span>';
+  if (imagePath.includes("parolin_pics/vallapok_vkek"))   return '<span class="badge badge-lblue">Hídépítési- Hídfenntartási</span>';
+  if (imagePath.includes("parolin_pics/vallapok_skek"))   return '<span class="badge badge-blue">Vonatmozgosítási- és Műhelyi</span>';
+  if (imagePath.includes("parolin_pics/vallapok_barna"))   return '<span class="badge badge-brown">Távközlő- és Biztosítóberendezési</span>';
+  if (imagePath.includes("parolin_pics/vallapok_fekete"))   return '<span class="badge badge-black">Egészségügyi</span>';
+  if (imagePath.includes("parolin_pics/vallapok_lila"))   return '<span class="badge badge-lila">Egyéb</span>';
   return '';
 }
