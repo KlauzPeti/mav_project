@@ -512,6 +512,50 @@ window.onload = () => {
   document.getElementById('szin')?.addEventListener('change', szures);
 };
 
+document.getElementById('kategoria').addEventListener('change', function() {
+  const kategoriavalasztas = this.value;
+  const szinSelect = document.getElementById('szin');
+
+  // Összes lehetséges opció
+  const osszes = [
+    {value: "", text: "Összes szakszolgálat"},
+    {value: "piros", text: "Forgalmi, kereskedelmi szakszolgálat"},
+    {value: "zold", text: "Pályafenntartási szakszolgálat"},
+    {value: "vkek", text: "Hídépítési- hídfenntartási szakszolgálat"},
+    {value: "kek", text: "Vontatási és műhely szakszolgálat"},
+    {value: "barna", text: "Távközlő és biztosítóberendezési szakszolgálat"},
+    {value: "fekete", text: "Egészségügyi szakszolgálat"},
+    {value: "lila", text: "Egyéb szakszolgálat"},
+    {value: "egyeb", text: "Egyéb"}
+  ];
+
+  let engedelyezett = [];
+
+  // Kategória szerinti engedélyezett szakszolgálatok
+  if (kategoriavalasztas === "parolin") {
+    engedelyezett = ["piros", "kek", "zold", "barna", "fekete", "lila", "egyeb"];
+  } else if (kategoriavalasztas === "vallap") {
+    // A vállapok esetén piros és egyéb nincs, de kék is szerepelhet
+    engedelyezett = ["zold", "barna", "fekete", "lila", "kek", "vkek", "piros"];
+  } else {
+    // Összes kategória: minden opció elérhető
+    engedelyezett = ["piros", "kek", "zold", "barna", "fekete", "lila", "egyeb"];
+  }
+  szinSelect.innerHTML = '';
+  osszes.forEach(opt => {
+    if (engedelyezett.includes(opt.value) || opt.value === "") {
+      const option = document.createElement('option');
+      option.value = opt.value;
+      option.textContent = opt.text;
+      szinSelect.appendChild(option);
+    }
+  });
+
+  // Frissítés a szűréshez
+  szures();
+});
+
+
 function getBadge(imagePath) {
   if (imagePath.includes("parolin_pics/uj piros"))  return '<span class="badge badge-red">Forgalmi, kereskedelmi</span>';
   if (imagePath.includes("parolin_pics/uj kek"))    return '<span class="badge badge-blue">Vontatás és műhely</span>';
