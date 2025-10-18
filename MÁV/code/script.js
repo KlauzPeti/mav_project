@@ -347,6 +347,8 @@ const cuccok = [
   { nev: "Szaktechnikus / Intéző", kategoria: "parolin", szolgalati_ido: 1985,   kep: "parolin_pics/parolin_zold/zszaktechnikus_intezo.png", szakcsoport: "I./a" },
   { nev: "Tiszt", kategoria: "parolin", szolgalati_ido: 0-5,   kep: "parolin_pics/parolin_zold/ztiszt_regi.png", szakcsoport: "II." },
   { nev: "Tisztképző Tanfolyam Hallgató", kategoria: "parolin", szolgalati_ido: 1985,   kep: "parolin_pics/parolin_zold/ztisztkepzo.png" },
+  { nev: "Felügyelő", kategoria: "parolin", szolgalati_ido: 21-25,   kep: "parolin_pics/parolin_zold/felugyelo_regi_zold.png", szakcsoport: "II." },
+  { nev: "Mérnök Főintéző I. / Titkár I.", kategoria: "parolin", szolgalati_ido: 1985,   kep: "parolin_pics/parolin_zold/mernok_fointezo1_titkar1_zold.png", szakcsoport: "I." },
   { nev: "Ellenőr II. - Ellenőr I.", kategoria: "parolin", szolgalati_ido: 16-20,   kep: "parolin_pics/parolin_barna/bellenor2_ellenor1.png", szakcsoport: "III." },
   { nev: "Felvigyázó I.", kategoria: "parolin", szolgalati_ido: 1985,   kep: "parolin_pics/parolin_barna/bfelvi1.png", szakcsoport: "IV." },
   { nev: "Felvigyázó III.", kategoria: "parolin", szolgalati_ido: 1985,   kep: "parolin_pics/parolin_barna/bfelvi3.png", szakcsoport: "IV." },
