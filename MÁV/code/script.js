@@ -1,5 +1,5 @@
 // A teljes lista
-const cuccok = [
+const kepek = [
   { nev: "Ellenőr II. - Ellenőr I.", kategoria: "parolin", szolgalati_ido: "16-20",   kep: "parolin_pics/parolin_piros/ellenor2_ellenor1.png", szakcsoport: "III." },
   { nev: "Főellenőr I.", kategoria: "parolin", szolgalati_ido: "26-30",   kep: "parolin_pics/parolin_piros/foellenor1.png", szakcsoport: "III." },
   { nev: "Főellenőr II.", kategoria: "parolin", szolgalati_ido: "21-25",   kep: "parolin_pics/parolin_piros/foellenor2.png", szakcsoport: "III." },
@@ -514,7 +514,7 @@ function szures() {
   const szolgalati_ido = document.getElementById('szolgalati_ido').value;
 
   // 1) szűrés
-  let szurt = cuccok.filter(c =>
+  let szurt = kepek.filter(c =>
     (kategoria === '' || c.kategoria === kategoria) &&
     (kulcsszo  === '' || c.nev.toLowerCase().includes(kulcsszo)) &&
     (szakcsoport === '' || c.szakcsoport === szakcsoport)&&
@@ -546,12 +546,12 @@ function resetSzurok() {
   document.getElementById('szakcsoport').value = '';
   document.getElementById('szin').value = '';
   document.getElementById('szolgalati_ido').value = '';
-  megjelenites(cuccok);
+  megjelenites(kepek);
 }
 
 // Oldal betöltésekor első körben mutassa az összeset
 window.onload = () => {
-  megjelenites(cuccok);
+  megjelenites(kepek);
 
   document.getElementById('kategoria').addEventListener('change', szures);
   document.getElementById('kulcsszo').addEventListener('input', szures);
