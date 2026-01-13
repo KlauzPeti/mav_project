@@ -482,14 +482,15 @@ const kepek = [
 ];
 
 // Megjelenít egy listát a galériában
+// Megjelenít egy listát a galériában (OPTIMALIZÁLT VÁLTOZAT)
 function megjelenites(lista) {
   const container = document.getElementById('cuccLista');
-  container.innerHTML = '';
-  lista.forEach(item => {
-    container.innerHTML += `
+  
+  // Ebbe gyűjtjük a HTML-t, nem a DOM-ot piszkáljuk minden körben
+  const htmlTomb = lista.map(item => `
       <div class="card">
         <div class="img-wrapper">
-          <img src="${item.kep}" alt="${item.nev}">
+          <img src="${item.kep}" alt="${item.nev}" loading="lazy" width="370" height="150">
         </div>
         <div class="card-info">
           <div class="badge-container">
@@ -500,8 +501,10 @@ function megjelenites(lista) {
           <p><strong>Év:</strong> ${item.szolgalati_ido}</p>
         </div>
       </div>
-    `;
-  });
+  `);
+
+  // Egyetlen lépésben írjuk ki az összeset --> Ez a gyorsítás kulcsa!
+  container.innerHTML = htmlTomb.join('');
 }
 
 // A szűrt + rendezett lista előállítása
