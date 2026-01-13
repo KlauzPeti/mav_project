@@ -514,30 +514,39 @@ function szures() {
   const rendezes  = document.getElementById('rendezes').value;
   const szakcsoport = document.getElementById('szakcsoport').value;
   const szin = document.getElementById('szin')?.value.toLowerCase();
-  const szolgalati_ido = document.getElementById('szolgalati_ido').value;
+  const szolgalati_ido_filter = document.getElementById('szolgalati_ido').value; // Átneveztem, hogy ne keveredjen
 
-  // 1) szűrés
+  // 1) SZŰRÉS
   let szurt = kepek.filter(c =>
     (kategoria === '' || c.kategoria === kategoria) &&
     (kulcsszo  === '' || c.nev.toLowerCase().includes(kulcsszo)) &&
-    (szakcsoport === '' || c.szakcsoport === szakcsoport)&&
-    (szin === '' || c.kep.toLowerCase().includes(szin))&&
-    (szolgalati_ido === '' || c.szolgalati_ido === szolgalati_ido)
+    (szakcsoport === '' || c.szakcsoport === szakcsoport) &&
+    (szin === '' || c.kep.toLowerCase().includes(szin)) &&
+    // Itt figyelj: a string összehasonlításnál ("0-5" === "0-5") fontos, hogy pontosan egyezzen
+    (szolgalati_ido_filter === '' || c.szolgalati_ido == szolgalati_ido_filter)
   );
 
-  // 2) rendezés objektum-mappinggel, plusz "asc"/"desc" év szerinti kulcsokkal
+  // 2) RENDEZÉS
+  // Segédfüggvény: kinyeri a számot a szolgálati időből, bármi is legyen az formátum
+  const getEv = (adat) => {
+    if (!adat.szolgalati_ido) return 0; // Ha nincs adat, legyen 0
+    // Ha szám (pl. 1985), akkor marad, ha szöveg (pl "16-20"), akkor parse
+    const szam = parseInt(adat.szolgalati_ido);
+    return isNaN(szam) ? 0 : szam; // Ha nem sikerült számot csinálni belőle, legyen 0
+  };
+
   const rendezok = {
     'nev-asc':  (a, b) => a.nev.localeCompare(b.nev, 'hu'),
     'nev-desc': (a, b) => b.nev.localeCompare(a.nev, 'hu'),
-    'asc':      (a, b) => a.ev - b.ev,   // ha a <select> még mindig asc=Év ↑
-    'desc':     (a, b) => b.ev - a.ev    // ha a <select> még mindig desc=Év ↓
+    'asc':      (a, b) => getEv(a) - getEv(b), // Növekvő (szám szerint)
+    'desc':     (a, b) => getEv(b) - getEv(a)  // Csökkenő (szám szerint)
   };
 
   if (rendezok[rendezes]) {
     szurt.sort(rendezok[rendezes]);
   }
 
-  // 3) Megjelenítjük a kapott listát
+  // 3) MEGJELENÍTÉS
   megjelenites(szurt);
 }
 
