@@ -193,3 +193,19 @@ header {
   background-position: center;
 }
 
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Mobilon csak 1 oszlop legyen */
+    padding: 10px;              /* Kisebb margó a széleken */
+  }
+
+  .card {
+    width: 100%;                /* Fix 370px helyett töltse ki a képernyőt */
+  }
+}
+
+h1, h2, h3, .header-title h1, .card-info h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px; /* Kicsit szellősebb betűk */
+  font-weight: bold;
+}
