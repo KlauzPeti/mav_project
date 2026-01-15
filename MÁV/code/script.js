@@ -498,7 +498,7 @@ function megjelenites(lista) {
           </div>
           <h3>${item.nev}</h3>
           <p><strong>Kategória:</strong> ${item.kategoria}</p>
-          <p><strong>Év:</strong> ${item.szolgalati_ido}</p>
+          ${ item.szolgalati_ido ? `<p><strong>Év:</strong> ${item.szolgalati_ido}</p>` : '' }
         </div>
       </div>
   `);
@@ -682,5 +682,3 @@ function getBadge(imagePath) {
   if (imagePath.includes("parolin_pics/vallapok_lila"))   return '<span class="badge badge-lila">Egyéb</span>';
   return '';
 }
-
-//dsdsdsds
