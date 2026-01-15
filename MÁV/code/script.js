@@ -682,3 +682,5 @@ function getBadge(imagePath) {
   if (imagePath.includes("parolin_pics/vallapok_lila"))   return '<span class="badge badge-lila">Egyéb</span>';
   return '';
 }
+
+//dsdsdsds
