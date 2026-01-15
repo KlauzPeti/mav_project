@@ -11,7 +11,7 @@ const kepek = [
   { nev: "Főtanácsos II. - Főtanácsos I. (fehér)", kategoria: "parolin", szolgalati_ido: "26-30",   kep: "parolin_pics/parolin_piros/fotanacsos1_2_feher.png", szakcsoport: "I./a" },
   { nev: "Főtiszt", kategoria: "parolin", szolgalati_ido: "6-10",   kep: "parolin_pics/parolin_piros/fotiszt_regi.png", szakcsoport: "III." },
   { nev: "Intéző II. - Intéző I.", kategoria: "parolin", szolgalati_ido: "11-15",   kep: "parolin_pics/parolin_piros/intezo2_intezo1.png", szakcsoport: "II." },
-  { nev: "Karszalag", kategoria: "parolin", szolgalati_ido: 1985,   kep: "parolin_pics/egyeb/Karszalag.png" },
+  { nev: "Karszalag", kategoria: "parolin", kep: "parolin_pics/egyeb/Karszalag.png" },
   { nev: "Mérnök Főintéző I. / Titkár I.", kategoria: "parolin", szolgalati_ido: "16-20",   kep: "parolin_pics/parolin_piros/mernok_fointezo1_titkar1.png", szakcsoport: "I." },
   { nev: "Mérnök Főintéző II. / Titkár II.", kategoria: "parolin", szolgalati_ido: "11-15",   kep: "parolin_pics/parolin_piros/mernok_fointezo2_titkar2.png", szakcsoport: "I." },
   { nev: "Mérnök Főtiszt / Fogalmazó", kategoria: "parolin", szolgalati_ido: "0-5",   kep: "parolin_pics/parolin_piros/mernok_fotiszt_fogalmazo.png", szakcsoport: "I." },
@@ -21,7 +21,7 @@ const kepek = [
   { nev: "Felvigyázó III.", kategoria: "parolin", szolgalati_ido: "21-25",   kep: "parolin_pics/parolin_piros/felvi3.png", szakcsoport: "IV." },
   { nev: "Felvigyázó IV. / Felvigyázó III.", kategoria: "parolin", szolgalati_ido: "16-20",   kep: "parolin_pics/parolin_piros/felvi4_felvi3.png", szakcsoport: "IV." },
   { nev: "Munkás IV. - Munkás III. / Kezelő IV. - Kezelő III.", kategoria: "parolin", szolgalati_ido: "16-20",   kep: "parolin_pics/parolin_piros/munkas4_3_kezelo4_3.png", szakcsoport: "V." },
-  { nev: "Sapkajelvény", kategoria: "parolin", szolgalati_ido: 1985,   kep: "parolin_pics/egyeb/Sapkajelveny.png" },
+  { nev: "Sapkajelvény", kategoria: "parolin",  kep: "parolin_pics/egyeb/Sapkajelveny.png"},
   { nev: "Segédellenőr II. / Segédellenőr I.", kategoria: "parolin", szolgalati_ido: "11-15",   kep: "parolin_pics/parolin_piros/segedellenor2_segedellenor1.png", szakcsoport: "III." },
   { nev: "Segédfelvigyázó II. / Segédfelvigyázó I.", kategoria: "parolin", szolgalati_ido: "11-15",   kep: "parolin_pics/parolin_piros/segedfel2_1.png", szakcsoport: "IV." },
   { nev: "Segédfelvigyázó III.", kategoria: "parolin", szolgalati_ido: "6-10",   kep: "parolin_pics/parolin_piros/segedfel3.png", szakcsoport: "IV." },
@@ -527,7 +527,7 @@ function szures() {
   );
 
   // 2) RENDEZÉS
-  // Segédfüggvény: kinyeri a számot a szolgálati időből, bármi is legyen az formátum
+  // Segédfüggvény: kinyeri a számot a szolgálati időből, bármi is legyen a formátum
   const getEv = (adat) => {
     if (!adat.szolgalati_ido) return 0; // Ha nincs adat, legyen 0
     // Ha szám (pl. 1985), akkor marad, ha szöveg (pl "16-20"), akkor parse
