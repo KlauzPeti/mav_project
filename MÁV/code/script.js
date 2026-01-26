@@ -481,7 +481,6 @@ const kepek = [
   { nev: "Főfelügyelő", kategoria: "parolin", szolgalati_ido: "26-30",   kep: "parolin_pics/parolin_lila/fofelugyelo_regi_lila.png", szakcsoport: "II." },
 ];
 
-// Megjelenít egy listát a galériában
 // Megjelenít egy listát a galériában (OPTIMALIZÁLT VÁLTOZAT)
 function megjelenites(lista) {
   const container = document.getElementById('cuccLista');
@@ -502,8 +501,7 @@ function megjelenites(lista) {
         </div>
       </div>
   `);
-
-  // Egyetlen lépésben írjuk ki az összeset --> Ez a gyorsítás kulcsa!
+  // Egyetlen lépésben írjuk ki az összeset
   container.innerHTML = htmlTomb.join('');
 }
 
@@ -514,7 +512,7 @@ function szures() {
   const rendezes  = document.getElementById('rendezes').value;
   const szakcsoport = document.getElementById('szakcsoport').value;
   const szin = document.getElementById('szin')?.value.toLowerCase();
-  const szolgalati_ido_filter = document.getElementById('szolgalati_ido').value; // Átneveztem, hogy ne keveredjen
+  const szolgalati_ido_filter = document.getElementById('szolgalati_ido').value;
 
   // 1) SZŰRÉS
   let szurt = kepek.filter(c =>
@@ -522,7 +520,7 @@ function szures() {
     (kulcsszo  === '' || c.nev.toLowerCase().includes(kulcsszo)) &&
     (szakcsoport === '' || c.szakcsoport === szakcsoport) &&
     (szin === '' || c.kep.toLowerCase().includes(szin)) &&
-    // Itt figyelj: a string összehasonlításnál ("0-5" === "0-5") fontos, hogy pontosan egyezzen
+    //a string összehasonlításnál ("0-5" === "0-5") fontos, hogy pontosan egyezzen
     (szolgalati_ido_filter === '' || c.szolgalati_ido == szolgalati_ido_filter)
   );
 
